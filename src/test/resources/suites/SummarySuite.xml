@@ -1,0 +1,42 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite Demo Parallel Testing" verbose="1" parallel="tests" thread-count="3">
+    <test name="Test Login Testing">
+        <classes>
+            <class name="com.nanon.FinalProject.testcases.LoginTest"/>
+        </classes>
+    </test>
+    <test name="Test Update Profile Testing">
+        <classes>
+            <class name="com.nanon.FinalProject.testcases.ProfileTest"/>
+        </classes>
+    </test>
+    <test name="Test Informaton Product Save To Excel Testing">
+        <classes>
+            <class name="com.nanon.FinalProject.testcases.ProductTest">
+                <methods>
+                    <include name="setDataProductToExcel"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Test Check Out Product Testing">
+        <classes>
+            <class name="com.nanon.FinalProject.testcases.CartTest">
+                <methods>
+                    <include name="CheckoutSuccess"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Test Add New Product And Check Detail New Product Testing">
+        <classes>
+            <class name="com.nanon.FinalProject.testcases.ProductTest">
+                <methods>
+                    <include name="addNewAProduct"/>
+                    <include name="CheckDetailNewAddProduct"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

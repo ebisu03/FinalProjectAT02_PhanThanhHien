@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite Demo Parallel Testing" verbose="1">
+    <test name="Test Add New Product And Check Detail New Product Testing">
+        <classes>
+            <class name="com.nanon.FinalProject.testcases.ProductTest">
+                <methods>
+                    <include name="addNewAProduct"/>
+                    <include name="CheckDetailNewAddProduct"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

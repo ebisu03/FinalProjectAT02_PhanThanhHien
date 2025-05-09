@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite Demo Parallel Testing" verbose="1">
+    <test name="Test Check Out Product Testing">
+        <classes>
+            <class name="com.nanon.FinalProject.testcases.CartTest">
+                <methods>
+                    <include name="CheckoutSuccess"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
